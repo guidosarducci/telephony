@@ -33,7 +33,7 @@ endef
 
 define Package/siproxd
   $(call Package/siproxd/Default)
-  DEPENDS:=+libltdl +libpthread +libosip2
+  DEPENDS:=+libltdl +libpthread +libosip2 +libsqlite3
   TITLE:=SIP (Session Initiation Protocol) proxy
   MENU:=1
 endef
@@ -79,6 +79,7 @@ define BuildPlugin
 endef
 
 $(eval $(call BuildPackage,siproxd))
+$(eval $(call BuildPlugin,blacklist))
 $(eval $(call BuildPlugin,codecfilter))
 $(eval $(call BuildPlugin,defaulttarget))
 $(eval $(call BuildPlugin,demo))
@@ -89,6 +90,7 @@ $(eval $(call BuildPlugin,logcall))
 $(eval $(call BuildPlugin,prefix))
 $(eval $(call BuildPlugin,regex))
 $(eval $(call BuildPlugin,shortdial))
+$(eval $(call BuildPlugin,stats))
 $(eval $(call BuildPlugin,stripheader))
 $(eval $(call BuildPlugin,stun))
 $(eval $(call BuildPlugin,siptrunk))

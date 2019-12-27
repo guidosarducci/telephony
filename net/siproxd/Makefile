@@ -8,12 +8,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=siproxd
-PKG_VERSION:=0.8.3dev
-PKG_RELEASE:=8
+PKG_VERSION:=0.8.2
+PKG_RELEASE:=5
 
-PKG_SOURCE:=siproxd-24Mar2018.tar.gz
-PKG_SOURCE_URL:=http://siproxd.tuxworld.ch/
-PKG_HASH:=bc314502d4c73c98ebdda9ad9828dcfac0980aecae05682c87407009f32d1f43
+PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
+PKG_SOURCE_URL:=@SF/siproxd
+PKG_HASH:=526ce491b0cc189e2766c62432aff3ebb995e551d7261ea32c02a90c7bf7ccd0
 
 PKG_FIXUP:=autoreconf
 PKG_INSTALL:=1

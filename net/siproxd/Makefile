@@ -8,10 +8,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=siproxd
-PKG_VERSION:=0.8.2
-PKG_RELEASE:=5
+PKG_VERSION:=0.8.3dev-20191109
+PKG_RELEASE:=1
 
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
+# No persistent link to latest source so patch against 3 year old release
+PKG_BASE_VERSION:=0.8.2
+
+PKG_SOURCE:=$(PKG_NAME)-$(PKG_BASE_VERSION).tar.gz
 PKG_SOURCE_URL:=@SF/siproxd
 PKG_HASH:=526ce491b0cc189e2766c62432aff3ebb995e551d7261ea32c02a90c7bf7ccd0
 
